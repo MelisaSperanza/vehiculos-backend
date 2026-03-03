@@ -1,5 +1,6 @@
 package com.rvsales.vehiculos_app.model;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,14 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-/*public class Vehiculo {
-    private Long id;
-    private String marca;
-    private String modelo;
-    private int año;
-    private String color;
-    private double precio;
-}*/
+
     public class Vehiculo {
         private String VIN;
         private String LicensePlate;
@@ -30,5 +24,7 @@ import lombok.NoArgsConstructor;
         private String Currency;
         private double EurLocalRate;
         private double LivePriceEurInclVat;
-}
+
+        }
+
 
