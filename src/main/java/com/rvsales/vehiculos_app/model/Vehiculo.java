@@ -24,6 +24,7 @@ import lombok.NoArgsConstructor;
         private String Currency;
         private double EurLocalRate;
         private double LivePriceEurInclVat;
+        private String thumbnailUrl;
 
         }
 

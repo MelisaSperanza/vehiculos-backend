@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
+import org.springframework.http.HttpStatus;
 
 import com.rvsales.vehiculos_app.model.Vehiculo;
 import com.rvsales.vehiculos_app.service.VehiculoService;
@@ -19,6 +21,7 @@ public class VehiculoController {
         this.vehiculoService = vehiculoService;
     }
 
+    
     // Lista interna para pruebas
     private List<Vehiculo> listaVehiculos = new ArrayList<>();
 
@@ -31,6 +34,15 @@ public class VehiculoController {
         @RequestParam(required = false) Integer anoMin) {
 
     return vehiculoService.filtrarVehiculos(pais, precioMax, anoMin);
+    }
+
+  @GetMapping("/{vin}")
+public Vehiculo obtenerVehiculoPorVin(@PathVariable String vin) {
+    Vehiculo vehiculo = vehiculoService.obtenerVehiculoPorVIN(vin);
+    if (vehiculo == null) {
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Vehículo no encontrado");
+    }
+    return vehiculo;
 }
     
 
@@ -53,13 +65,5 @@ public class VehiculoController {
         return vehiculo;
     }
 
-    // Opcional: inicializar algunos vehículos al arrancar (descomentar si quieres)
-    /*
-    @PostConstruct
-    public void init() {
-        listaVehiculos.add(new Vehiculo(1L, "Toyota", "Corolla", 2020, "Blanco", 15000));
-        listaVehiculos.add(new Vehiculo(2L, "Ford", "Focus", 2019, "Negro", 13000));
-        listaVehiculos.add(new Vehiculo(3L, "Seat", "Ibiza", 2021, "Rojo", 14500));
-    }
-    */
+
 }
