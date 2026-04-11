@@ -38,13 +38,14 @@ public class VehiculoController {
     }
 
   @GetMapping("/{vin}")
-public Vehiculo obtenerVehiculoPorVin(@PathVariable String vin) {
-    Vehiculo vehiculo = vehiculoService.obtenerVehiculoPorVIN(vin);
-    if (vehiculo == null) {
-        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Vehículo no encontrado");
+    
+    public Vehiculo obtenerVehiculoPorVin(@PathVariable String vin) {
+        Vehiculo vehiculo = vehiculoService.obtenerVehiculoPorVIN(vin);
+        if (vehiculo == null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Vehículo no encontrado");
+        }
+        return vehiculo;
     }
-    return vehiculo;
-}
     
 
     public String getMethodName(@RequestParam String param) {

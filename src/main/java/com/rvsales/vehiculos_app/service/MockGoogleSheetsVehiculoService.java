@@ -1,8 +1,8 @@
-
 package com.rvsales.vehiculos_app.service;
 
 import org.springframework.stereotype.Service;
 import com.rvsales.vehiculos_app.model.Vehiculo;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -13,21 +13,82 @@ public class MockGoogleSheetsVehiculoService implements VehiculoService {
 
     // Constructor para poblar la lista
     public MockGoogleSheetsVehiculoService() {
-        listaVehiculos.add(new Vehiculo("1HGCM82633A004352", "1234ABC", "Available", "Civic LX", "Chassis A", "Manual", "Barcelona", "Spain", "Spain", 2020, 15000.0, "EUR", 1.0, 18000.0, "https://via.placeholder.com/150"));
-        listaVehiculos.add(new Vehiculo("1FAFP404X1F192345", "5678DEF", "Reserved", "Focus SE", "Chassis B", "Automatic", "Madrid", "Spain", "Spain", 2018, 22000.0, "EUR", 1.0, 12000.0, "https://via.placeholder.com/150"));
-        listaVehiculos.add(new Vehiculo("5YJ3E1EA7KF317452", "9999TES", "Available", "Model 3", "Chassis C", "Automatic", "Valencia", "Spain", "Spain", 2022, 8000.0, "EUR", 1.0, 35000.0, "https://via.placeholder.com/150"));
-        listaVehiculos.add(new Vehiculo("WDBUF56X38B123456", "1122GHI", "Available", "E-Class", "Chassis D", "Automatic", "Seville", "Spain", "Spain", 2019, 30000.0, "EUR", 1.0, 28000.0, "https://via.placeholder.com/150"));
-        listaVehiculos.add(new Vehiculo("JHMFA16586S012345", "3344JKL", "Maintenance", "Fit LX", "Chassis E", "Manual", "Bilbao", "Spain", "Spain", 2017, 45000.0, "EUR", 1.0, 9500.0, "https://via.placeholder.com/150"));
-        listaVehiculos.add(new Vehiculo("3VW2K7AJ5FM012345", "5566MNO", "Available", "Golf Trendline", "Chassis F", "Manual", "Barcelona", "Spain", "Spain", 2016, 50000.0, "EUR", 1.0, 11000.0, "https://via.placeholder.com/150"));
-        listaVehiculos.add(new Vehiculo("2T1BURHE5JC012345", "7788PQR", "Reserved", "Corolla XLE", "Chassis G", "Automatic", "Madrid", "Spain", "Spain", 2018, 25000.0, "EUR", 1.0, 16000.0, "https://via.placeholder.com/150"));
-        listaVehiculos.add(new Vehiculo("SALWR2FK7FA123456", "9900STU", "Available", "Range Rover", "Chassis H", "Automatic", "Barcelona", "Spain", "Spain", 2021, 12000.0, "EUR", 1.0, 55000.0, "https://via.placeholder.com/150"));
-        listaVehiculos.add(new Vehiculo("1N4AL3AP1HC123456", "2233VWX", "Available", "Altima SV", "Chassis I", "Automatic", "Paris", "France", "France", 2019, 20000.0, "EUR", 1.0, 18000.0, "https://via.placeholder.com/150"));
-        listaVehiculos.add(new Vehiculo("KM8J3CA48JU123456", "4455YZA", "Maintenance", "Tucson GLS", "Chassis J", "Manual", "Seville", "Spain", "Spain", 2017, 35000.0, "EUR", 1.0, 14000.0, "https://via.placeholder.com/150"));
-        listaVehiculos.add(new Vehiculo("1C4RJFBG0JC123456", "6677BCD", "Available", "Grand Cherokee", "Chassis K", "Automatic", "Bilbao", "Spain", "Spain", 2020, 15000.0, "EUR", 1.0, 37000.0, "https://via.placeholder.com/150"));
-        listaVehiculos.add(new Vehiculo("JF1GPAL69DH123456", "8899EFG", "Reserved", "Impreza Sport", "Chassis L", "Manual", "Barcelona", "Spain", "Spain", 2018, 28000.0, "EUR", 1.0, 14500.0, "https://via.placeholder.com/150"));
-        listaVehiculos.add(new Vehiculo("WBA8E9G50GNU12345", "1010HIJ", "Available", "328i", "Chassis M", "Automatic", "Madrid", "Spain", "Spain", 2021, 10000.0, "EUR", 1.0, 29000.0, "https://via.placeholder.com/150"));
-        listaVehiculos.add(new Vehiculo("3FA6P0H73JR123456", "1212KLM", "Available", "Fusion SE", "Chassis N", "Automatic", "Valencia", "Spain", "Spain", 2019, 22000.0, "EUR", 1.0, 16000.0, "https://via.placeholder.com/150"));
-        listaVehiculos.add(new Vehiculo("SALGS2EF6HA123456", "1313NOP", "Maintenance", "Range Rover Sport", "Chassis O", "Automatic", "Seville", "Spain", "Spain", 2022, 5000.0, "EUR", 1.0, 68000.0, "https://via.placeholder.com/150"));
+
+        Vehiculo v1 = new Vehiculo();
+        v1.setVin("1HGCM82633A004352");
+        v1.setLicensePlate("1234ABC");
+        v1.setReservationStatus("Available");
+        v1.setIndieVehicleModel("Civic LX");
+        v1.setChassisModel("Chassis A");
+        v1.setTransmission("Manual");
+        v1.setCurrentLocation("Barcelona");
+        v1.setCurrentCountry("Spain");
+        v1.setRegistrationCountry("Spain");
+        v1.setModelYear(2020);
+        v1.setKms(15000.0);
+        v1.setCurrency("EUR");
+        v1.setEurLocalRate(1.0);
+        v1.setLivePriceEurInclVat(18000.0);
+        v1.setThumbnailUrl("https://via.placeholder.com/150");
+
+        listaVehiculos.add(v1);
+
+        Vehiculo v2 = new Vehiculo();
+        v2.setVin("1FAFP404X1F192345");
+        v2.setLicensePlate("5678DEF");
+        v2.setReservationStatus("Reserved");
+        v2.setIndieVehicleModel("Focus SE");
+        v2.setChassisModel("Chassis B");
+        v2.setTransmission("Automatic");
+        v2.setCurrentLocation("Madrid");
+        v2.setCurrentCountry("Spain");
+        v2.setRegistrationCountry("Spain");
+        v2.setModelYear(2018);
+        v2.setKms(22000.0);
+        v2.setCurrency("EUR");
+        v2.setEurLocalRate(1.0);
+        v2.setLivePriceEurInclVat(12000.0);
+        v2.setThumbnailUrl("https://via.placeholder.com/150");
+
+        listaVehiculos.add(v2);
+
+        Vehiculo v3 = new Vehiculo();
+        v3.setVin("5YJ3E1EA7KF317452");
+        v3.setLicensePlate("9999TES");
+        v3.setReservationStatus("Available");
+        v3.setIndieVehicleModel("Model 3");
+        v3.setChassisModel("Chassis C");
+        v3.setTransmission("Automatic");
+        v3.setCurrentLocation("Valencia");
+        v3.setCurrentCountry("Spain");
+        v3.setRegistrationCountry("Spain");
+        v3.setModelYear(2022);
+        v3.setKms(8000.0);
+        v3.setCurrency("EUR");
+        v3.setEurLocalRate(1.0);
+        v3.setLivePriceEurInclVat(35000.0);
+        v3.setThumbnailUrl("https://via.placeholder.com/150");
+
+        listaVehiculos.add(v3);
+
+        Vehiculo v4 = new Vehiculo();
+        v4.setVin("WDBUF56X38B123456");
+        v4.setLicensePlate("1122GHI");
+        v4.setReservationStatus("Available");
+        v4.setIndieVehicleModel("E-Class");
+        v4.setChassisModel("Chassis D");
+        v4.setTransmission("Automatic");
+        v4.setCurrentLocation("Seville");
+        v4.setCurrentCountry("Spain");
+        v4.setRegistrationCountry("Spain");
+        v4.setModelYear(2019);
+        v4.setKms(30000.0);
+        v4.setCurrency("EUR");
+        v4.setEurLocalRate(1.0);
+        v4.setLivePriceEurInclVat(28000.0);
+        v4.setThumbnailUrl("https://via.placeholder.com/150");
+
+        listaVehiculos.add(v4);
     }
 
     @Override
@@ -47,7 +108,7 @@ public class MockGoogleSheetsVehiculoService implements VehiculoService {
     @Override
     public Vehiculo obtenerVehiculoPorVIN(String vin) {
         return listaVehiculos.stream()
-            .filter(v -> v.getVIN().equalsIgnoreCase(vin))
+            .filter(v -> v.getVin().equalsIgnoreCase(vin))
             .findFirst()
             .orElse(null);
     }
