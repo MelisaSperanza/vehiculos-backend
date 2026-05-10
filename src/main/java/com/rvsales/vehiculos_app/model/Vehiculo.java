@@ -26,14 +26,11 @@ public class Vehiculo {
     private String currentLocation;
     private String currentCountry;
     private String registrationCountry;
-
     private int modelYear;
     private double kms;
-
     private String currency;
     private double eurLocalRate;
     private double livePriceEurInclVat;
-
     private String thumbnailUrl;
 }
 
