@@ -32,6 +32,7 @@ public class Vehiculo {
     private double eurLocalRate;
     private double livePriceEurInclVat;
     private String thumbnailUrl;
+    private String image;
 }
 
 
