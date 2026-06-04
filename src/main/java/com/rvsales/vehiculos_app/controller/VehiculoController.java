@@ -13,7 +13,7 @@ import com.rvsales.vehiculos_app.service.VehiculoService;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
-@RequestMapping("/vehiculos")
+@RequestMapping("/api/vehiculos")
 public class VehiculoController {
 
     private final VehiculoService vehiculoService;
