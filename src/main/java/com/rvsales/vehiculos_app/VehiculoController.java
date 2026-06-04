@@ -1,4 +1,4 @@
-package com.rvsales.vehiculos_app.controller;
+package com.rvsales.vehiculos_app;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +11,10 @@ import com.rvsales.vehiculos_app.model.Vehiculo;
 import com.rvsales.vehiculos_app.service.VehiculoService;
 
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {
+    "http://localhost:3000",
+    "https://super-pasca-612521.netlify.app"
+})
 @RestController
 @RequestMapping("/api/vehiculos")
 public class VehiculoController {
