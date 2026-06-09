@@ -62,6 +62,12 @@ public class VehiculoController {
         return "API funcionando";
     }
 
+    //otro endpoint de prueba:
+    @GetMapping("/debug")
+public String debug() {
+    return "DEPLOY_OK_" + System.currentTimeMillis();
+}    
+
     // Endpoint para agregar vehículos
     @PostMapping
     public Vehiculo agregarVehiculo(@RequestBody Vehiculo vehiculo) {
