@@ -29,12 +29,7 @@ public class VehiculoController {
         this.vehiculoService = vehiculoService;
         this.vehiculoRepository = vehiculoRepository;
     }
-
-    
-    // Lista interna para pruebas
-    private List<Vehiculo> listaVehiculos = new ArrayList<>();
-
-
+   
 
    @GetMapping
     public List<Vehiculo> obtenerVehiculos(
@@ -69,16 +64,15 @@ public class VehiculoController {
 
     //otro endpoint de prueba:
     @GetMapping("/debug")
-public String debug() {
-    return "DEPLOY_OK_" + System.currentTimeMillis();
-}    
+    public String debug() {
+        return "DEPLOY_OK_" + System.currentTimeMillis();
+    }    
 
     // Endpoint para agregar vehículos
     @PostMapping
     public Vehiculo agregarVehiculo(@RequestBody Vehiculo vehiculo) {
-        vehiculo.setLicensePlate(String.valueOf(listaVehiculos.size() + 1));
-        listaVehiculos.add(vehiculo);
-        return vehiculo;
+        return vehiculoRepository.save(vehiculo);
+        
     }
     @PostConstruct
     public void debugDB() {
