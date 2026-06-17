@@ -1,5 +1,6 @@
 package com.rvsales.vehiculos_app;
 
+import com.rvsales.vehiculos_app.repository.VehiculoRepository;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +11,8 @@ import org.springframework.http.HttpStatus;
 import com.rvsales.vehiculos_app.model.Vehiculo;
 import com.rvsales.vehiculos_app.service.VehiculoService;
 
+import jakarta.annotation.PostConstruct;
+
 
 @CrossOrigin(origins = {
     "http://localhost:3000",
@@ -19,10 +22,12 @@ import com.rvsales.vehiculos_app.service.VehiculoService;
 @RequestMapping("/api/vehiculos")
 public class VehiculoController {
 
+    private final VehiculoRepository vehiculoRepository;
     private final VehiculoService vehiculoService;
 
-    public VehiculoController(VehiculoService vehiculoService) {
+    public VehiculoController(VehiculoService vehiculoService, VehiculoRepository vehiculoRepository) {
         this.vehiculoService = vehiculoService;
+        this.vehiculoRepository = vehiculoRepository;
     }
 
     
@@ -75,6 +80,9 @@ public String debug() {
         listaVehiculos.add(vehiculo);
         return vehiculo;
     }
-
+    @PostConstruct
+    public void debugDB() {
+        System.out.println("TOTAL VEHICULOS: " + vehiculoRepository.count());
+    }
 
 }
