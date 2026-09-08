@@ -15,7 +15,7 @@
     "currency": "EUR",
     "eurLocalRate": 1.0,
     "livePriceEurInclVat": 14500.0,
-    "thumbnailUrl": "cuteCarPics/cuteCar19.png",
+    "thumbnailUrl": "/cuteCarPics/cuteCar19.png",
     "image": null
   },
   {
@@ -34,7 +34,7 @@
     "currency": "EUR",
     "eurLocalRate": 1.0,
     "livePriceEurInclVat": 35000.0,
-    "thumbnailUrl": "cuteCarPics/cuteCar18.png",
+    "thumbnailUrl": "/cuteCarPics/cuteCar18.png",
     "image": null
   },
   {
@@ -53,7 +53,7 @@
     "currency": "EUR",
     "eurLocalRate": 1.0,
     "livePriceEurInclVat": 28000.0,
-    "thumbnailUrl": "cuteCarPics/cuteCar17.png",
+    "thumbnailUrl": "/cuteCarPics/cuteCar17.png",
     "image": null
   },
   {
@@ -72,7 +72,7 @@
     "currency": "EUR",
     "eurLocalRate": 1.0,
     "livePriceEurInclVat": 17000.0,
-    "thumbnailUrl": "cuteCarPics/cuteCar16.png",
+    "thumbnailUrl": "/cuteCarPics/cuteCar16.png",
     "image": null
   },
   {
@@ -91,7 +91,7 @@
     "currency": "EUR",
     "eurLocalRate": 1.0,
     "livePriceEurInclVat": 24000.0,
-    "thumbnailUrl": "cuteCarPics/cuteCar15.png",
+    "thumbnailUrl": "/cuteCarPics/cuteCar15.png",
     "image": null
   },
   {
@@ -110,7 +110,7 @@
     "currency": "EUR",
     "eurLocalRate": 1.0,
     "livePriceEurInclVat": 9500.0,
-    "thumbnailUrl": "cuteCarPics/cuteCar13.png",
+    "thumbnailUrl": "/cuteCarPics/cuteCar13.png",
     "image": null
   },
   {
@@ -129,7 +129,7 @@
     "currency": "EUR",
     "eurLocalRate": 1.0,
     "livePriceEurInclVat": 19500.0,
-    "thumbnailUrl": "cuteCarPics/cuteCar12.png",
+    "thumbnailUrl": "/cuteCarPics/cuteCar12.png",
     "image": null
   },
   {
@@ -148,7 +148,7 @@
     "currency": "EUR",
     "eurLocalRate": 1.0,
     "livePriceEurInclVat": 31000.0,
-    "thumbnailUrl": "cuteCarPics/cuteCar12.png",
+    "thumbnailUrl": "/cuteCarPics/cuteCar12.png",
     "image": null
   },
   {
@@ -167,7 +167,7 @@
     "currency": "EUR",
     "eurLocalRate": 1.0,
     "livePriceEurInclVat": 27000.0,
-    "thumbnailUrl": "cuteCarPics/cuteCar11.png",,
+    "thumbnailUrl": "/cuteCarPics/cuteCar11.png",,
     "image": null
   },
   {
@@ -186,7 +186,7 @@
     "currency": "EUR",
     "eurLocalRate": 1.0,
     "livePriceEurInclVat": 6500.0,
-    "thumbnailUrl": "cuteCarPics/cuteCar10.png",
+    "thumbnailUrl": "/cuteCarPics/cuteCar10.png",
     "image": null
   },
   {
@@ -205,7 +205,7 @@
     "currency": "EUR",
     "eurLocalRate": 1.0,
     "livePriceEurInclVat": 21000.0,
-    "thumbnailUrl": "cuteCarPics/cuteCar9.png",
+    "thumbnailUrl": "/cuteCarPics/cuteCar9.png",
     "image": null
   },
   {
@@ -224,7 +224,7 @@
     "currency": "EUR",
     "eurLocalRate": 1.0,
     "livePriceEurInclVat": 39000.0,
-    "thumbnailUrl": "cuteCarPics/cuteCar8.png",
+    "thumbnailUrl": "/cuteCarPics/cuteCar8.png",
     "image": null
   },
   {
@@ -243,7 +243,7 @@
     "currency": "EUR",
     "eurLocalRate": 1.0,
     "livePriceEurInclVat": 13000.0,
-    "thumbnailUrl": "cuteCarPics/cuteCar7.png",
+    "thumbnailUrl": "/cuteCarPics/cuteCar7.png",
     "image": null
   },
   {
@@ -262,7 +262,7 @@
     "currency": "EUR",
     "eurLocalRate": 1.0,
     "livePriceEurInclVat": 29000.0,
-    "thumbnailUrl": "cuteCarPics/cuteCar6.png",
+    "thumbnailUrl": "/cuteCarPics/cuteCar6.png",
     "image": null
   },
   {
@@ -281,7 +281,7 @@
     "currency": "EUR",
     "eurLocalRate": 1.0,
     "livePriceEurInclVat": 22500.0,
-    "thumbnailUrl": "cuteCarPics/cuteCar5.png",
+    "thumbnailUrl": "/cuteCarPics/cuteCar5.png",
   },
   {
     "id": 16,
@@ -299,7 +299,7 @@
     "currency": "EUR",
     "eurLocalRate": 1.0,
     "livePriceEurInclVat": 33000.0,
-    "thumbnailUrl": "cuteCarPics/cuteCar4.png",
+    "thumbnailUrl": "/cuteCarPics/cuteCar4.png",
     "image": null
   },
   {
@@ -318,7 +318,7 @@
     "currency": "EUR",
     "eurLocalRate": 1.0,
     "livePriceEurInclVat": 18500.0,
-    "thumbnailUrl": "cuteCarPics/cuteCar3.png",
+    "thumbnailUrl": "/cuteCarPics/cuteCar3.png",
     "image": null
   },
   {
@@ -337,7 +337,7 @@
     "currency": "EUR",
     "eurLocalRate": 1.0,
     "livePriceEurInclVat": 18500.0,
-    "thumbnailUrl": "cuteCarPics/cuteCar3.png",
+    "thumbnailUrl": "/cuteCarPics/cuteCar3.png",
     "image": null
   },
   {
@@ -356,7 +356,7 @@
     "currency": "EUR",
     "eurLocalRate": 1.0,
     "livePriceEurInclVat": 42000.0,
-    "thumbnailUrl": "cuteCarPics/cuteCar2.png",
+    "thumbnailUrl": "/cuteCarPics/cuteCar2.png",
     "image": null
   },
   {
@@ -375,7 +375,7 @@
     "currency": "EUR",
     "eurLocalRate": 1.0,
     "livePriceEurInclVat": 26000.0,
-    "thumbnailUrl": "cuteCarPics/cuteCar1.png",
+    "thumbnailUrl": "/cuteCarPics/cuteCar1.png",
     "image": null
   }
 ]
