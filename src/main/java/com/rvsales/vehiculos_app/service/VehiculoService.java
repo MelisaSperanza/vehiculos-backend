@@ -7,7 +7,13 @@ public interface VehiculoService {
 
     List<Vehiculo> obtenerVehiculos();
 
-    List<Vehiculo> filtrarVehiculos(String pais, Double precioMax, Integer anoMin);
+    List<Vehiculo> filtrarVehiculos(
+        String pais,
+        Double precioMax,
+        Integer anoMin
+    );
 
     Vehiculo obtenerVehiculoPorVIN(String vin);
+
+    Vehiculo agregarVehiculo(Vehiculo vehiculo);
 }

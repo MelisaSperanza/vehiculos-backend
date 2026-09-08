@@ -1,18 +1,13 @@
 package com.rvsales.vehiculos_app;
 
-import com.rvsales.vehiculos_app.repository.VehiculoRepository;
-import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-import org.springframework.http.HttpStatus;
 
 import com.rvsales.vehiculos_app.model.Vehiculo;
 import com.rvsales.vehiculos_app.service.VehiculoService;
-
-import jakarta.annotation.PostConstruct;
-
 
 @CrossOrigin(origins = {
     "http://localhost:3000",
@@ -22,61 +17,56 @@ import jakarta.annotation.PostConstruct;
 @RequestMapping("/api/vehiculos")
 public class VehiculoController {
 
-    private final VehiculoRepository vehiculoRepository;
     private final VehiculoService vehiculoService;
 
-    public VehiculoController(VehiculoService vehiculoService, VehiculoRepository vehiculoRepository) {
+    public VehiculoController(VehiculoService vehiculoService) {
         this.vehiculoService = vehiculoService;
-        this.vehiculoRepository = vehiculoRepository;
     }
-   
 
-   @GetMapping
+    @GetMapping
     public List<Vehiculo> obtenerVehiculos(
-        @RequestParam(required = false) String pais,
-        @RequestParam(required = false) Double precioMax,
-        @RequestParam(required = false) Integer anoMin) {
+            @RequestParam(required = false) String pais,
+            @RequestParam(required = false) Double precioMax,
+            @RequestParam(required = false) Integer anoMin) {
 
-    return vehiculoService.filtrarVehiculos(pais, precioMax, anoMin);
+        return vehiculoService.filtrarVehiculos(
+            pais,
+            precioMax,
+            anoMin
+        );
     }
 
-  @GetMapping("/{vin}")
-    
-    public Vehiculo obtenerVehiculoPorVin(@PathVariable String vin) {
-        Vehiculo vehiculo = vehiculoService.obtenerVehiculoPorVIN(vin);
+    @GetMapping("/{vin}")
+    public Vehiculo obtenerVehiculoPorVin(
+            @PathVariable String vin) {
+
+        Vehiculo vehiculo =
+            vehiculoService.obtenerVehiculoPorVIN(vin);
+
         if (vehiculo == null) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Vehículo no encontrado");
+            throw new ResponseStatusException(
+                HttpStatus.NOT_FOUND,
+                "Vehículo no encontrado"
+            );
         }
+
         return vehiculo;
     }
-    
 
-    public String getMethodName(@RequestParam String param) {
-        return new String();
-    }
-    
-
-    // Endpoint de prueba
     @GetMapping("/test")
     public String testEndpoint() {
         return "API funcionando";
     }
 
-    //otro endpoint de prueba:
     @GetMapping("/debug")
     public String debug() {
         return "DEPLOY_OK_" + System.currentTimeMillis();
-    }    
+    }
 
-    // Endpoint para agregar vehículos
     @PostMapping
-    public Vehiculo agregarVehiculo(@RequestBody Vehiculo vehiculo) {
-        return vehiculoRepository.save(vehiculo);
-        
-    }
-    @PostConstruct
-    public void debugDB() {
-        System.out.println("TOTAL VEHICULOS: " + vehiculoRepository.count());
-    }
+    public Vehiculo agregarVehiculo(
+            @RequestBody Vehiculo vehiculo) {
 
+        return vehiculoService.agregarVehiculo(vehiculo);
+    }
 }
