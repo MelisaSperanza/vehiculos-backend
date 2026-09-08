@@ -167,7 +167,7 @@
     "currency": "EUR",
     "eurLocalRate": 1.0,
     "livePriceEurInclVat": 27000.0,
-    "thumbnailUrl": "/cuteCarPics/cuteCar11.png",,
+    "thumbnailUrl": "/cuteCarPics/cuteCar11.png",
     "image": null
   },
   {
@@ -282,6 +282,7 @@
     "eurLocalRate": 1.0,
     "livePriceEurInclVat": 22500.0,
     "thumbnailUrl": "/cuteCarPics/cuteCar5.png",
+    "image": null
   },
   {
     "id": 16,
